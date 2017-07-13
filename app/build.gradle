@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildTypes.each {
+        it.resValue  "string", 'YOUTUBE_API_KEY', youtubeApiKey
+    }
 }
 
 dependencies {
